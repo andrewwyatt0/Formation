@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "file": "partial.css",
+  "sources": [
+    "partial.scss"
+  ],
+  "mappings": ";AAAA,AAAA,cAAc,CAAC;EACX,KAAK,EAAE,GAAI,GACd",
+  "names": []
+}

@@ -1,0 +1,10 @@
+@import "bourbon";
+@import "partial";
+
+* {
+    font-family: $helvetica;
+}
+
+button {
+    @include button(shiny, #ff0000);
+}
