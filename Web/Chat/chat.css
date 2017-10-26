@@ -1,0 +1,108 @@
+body{
+	box-sizing:border-box;
+	background-color:#EEE;
+}
+	#container{
+	position:relative;
+	width:600px;
+	height:600px;
+	border: 1px solid #CCC;
+	margin: 0 auto;
+	background-color:#FFF;
+}
+
+#body{
+	position: absolute;
+	bottom: 60px;
+	left:0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100px;
+	transform:rotate(-45deg);
+
+	width:180px;
+	height:180px;
+	background-color:#00F;
+	border-radius: 4px 40px 4px 40px;
+
+}
+#head{
+	position: absolute;
+	bottom: 90px;
+	right:85px;
+	transform:rotate(-90deg);
+	width:100px;
+	height:100px;
+	background-color:#00F;
+	border-radius: 5px;
+}
+
+#eyes
+{
+	position: absolute;
+	bottom: 150px;
+	right:95px;
+	width: 30px;
+	height:30px;
+	background-color: white;
+	border-radius: 15px;
+}
+#pupil
+{
+	position: absolute;
+	bottom: 0;
+	right:0;
+	width: 20px;
+	height:20px;
+	background-color: black;
+	border-radius: 10px;
+}
+#rearLeg{
+	position: absolute;
+	bottom: 0px;
+	left:190px;
+	transform:rotate(5deg);
+	width:30px;
+	height:150px;
+	background-color:#00F;
+	border-radius: 7px;
+}
+#frontLeg{
+	position: absolute;
+	bottom: 0px;
+	right:200px;
+	transform:rotate(-10deg);
+	width:25px;
+	height:150px;
+	background-color:#00F;
+	border-radius: 7px;
+}
+.paw{
+	position: absolute;
+	bottom: 0;
+	right:-5px;
+	width:10px;
+	height:10px;
+	background-color:#00F;
+	border-radius: 5px;
+}
+
+.tailContainer{
+	position: absolute;
+	bottom: 5px;
+	left:175px;
+	width:14px;
+	height:300px;
+	transform:rotate(-45deg);
+}
+/*******************Animation*************************/
+.tail{
+	float:left;
+	width:14px;
+	height:150px;
+	background-color:#00F;
+	border-radius: 7px;
+}
+
+
