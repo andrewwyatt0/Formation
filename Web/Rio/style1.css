@@ -1,0 +1,248 @@
+/****** Reset ********/
+* {
+	box-sizing: border-box;   /*element width = width+padding+border*/
+	 /*padding:0; margin:0; */
+}
+
+/********* reset, la suite ***********/
+html, body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+
+    font-family: 'Jura', sans-serif;
+    color:#BCDEFF;
+    background-color: #5294c4;
+}
+body{
+
+}
+
+
+.clear{
+	clear: both;
+}
+.wrapper{
+	max-width: 1200px;
+	margin: 0 auto;
+
+}
+
+
+/******** Href *****/
+a{
+    font-family: 'Jura', sans-serif;
+	color:#BCDEFF;
+	text-decoration: none;
+
+}
+
+a:hover{
+	color:#EEF2FF;
+    text-shadow: 0px 2px 2px #32487F;
+}
+ a img{
+	vertical-align: bottom;
+ }
+
+ h1, h2, h3{
+     font-family: 'Pacifico', cursive;
+     font-weight:100;
+
+ }
+ h1{
+
+    font-size:1.6em;
+
+ }
+ h2{
+    font-size:1.2em;
+ }
+ h3{
+    font-family: 'Jura', sans-serif;
+    color:#6E8FB5;
+    font-size:1.1em;
+ }
+
+/************** Header ********************/
+#h-top{
+
+	padding:0 0 10px 0;
+	text-align:center;
+
+}
+
+#logo{
+	float:left;
+	padding:10px 0 0 20px;
+}
+nav{
+
+}
+
+nav ul{
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: space-around;
+	margin: 0;
+	list-style: none;
+	padding:2.7em 0 0 0;
+	font-size: 2.2em;
+
+}
+
+nav li{
+	display:inline;
+	padding:0 20px;
+    /*text-shadow: 2px 2px 4px white;*/
+}
+
+#h-bottom{
+	background:url('img/banniere1.png');
+	background-repeat: no-repeat;
+	background-size:cover;
+	width:100%;
+	height:200px;
+    position: relative;/*stick*/
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+#layer {
+    margin:0;
+   padding:0.5em 0.5em;
+   position: absolute;
+   bottom: 0;
+   width:100%;
+}
+
+#button-zoom,#button-article{
+    border:1px solid #BCDEFF;
+    color: #BCDEFF;
+	border-radius: 5px;
+	padding:3px;
+}
+
+#button-article{
+	float:right;
+}
+
+/***************Article **************************/
+section{
+
+}
+
+article p{
+    font-size:1em;
+    font-weight:100;
+}
+#info{
+
+	padding-left:5px;
+}
+#article-text{
+	padding:0 10px;
+	text-align: justify;
+}
+
+/************** Aside ***********************/
+#propos{
+    position:absolute;
+    bottom:160px;
+    right:0;
+    background-color:#BCDEFF;
+	float:right;
+	width:250px;
+
+	margin-top:20px;
+	color:#0a495a;
+	margin-left:20px;
+
+}
+
+#propos #caret{
+    text-align: center;
+}
+aside p, figcaption{
+    font-family: 'Indie Flower', cursive;
+    font-size:0.9em;
+}
+#fig1{
+    display: none;
+	margin:0;
+	padding:0 10px ;
+}
+.align{
+	text-align:center;
+}
+figcaption{
+	text-align: justify;
+    color:#5294C4;
+}
+.stats{
+    color:#5294C4;
+}
+
+
+/************Footer*******************************/
+ .page-wrap {
+  position:relative;
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -160px;
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+ .site-footer, .page-wrap:after {
+  height: 160px;
+}
+.site-footer {
+  background: #E5D69B;
+}
+
+
+ footer{
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: space-between;
+	padding-bottom:20px;
+
+ }
+#news{
+
+	padding-left: 20px;
+}
+#input-box{
+	margin:0 0 10px 0;
+    background-color:#FFF3C4;
+    border-radius:5px;
+    border: 0px solid ;
+    padding:3px 5px ;
+}
+#button-abonner{
+    border:1px solid #27465C;
+    color: #27465C;
+	border-radius: 5px;
+	padding:3px 5px ;
+}
+.photos{
+
+	padding:0 15px 0 0;
+}
+
+#partenaires{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	padding-right:20px;
+}
+
+#partenaires h3{
+
+}

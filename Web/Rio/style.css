@@ -1,0 +1,143 @@
+/****** Reset ********/
+* {
+	box-sizing: border-box;   /*element width = width+padding+border*/
+	/* padding:0; margin:0; */
+}
+
+/********* reset, la suite ***********/
+html, body{
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	background-color: white;
+}
+
+.clear{
+	clear: both;
+}
+
+/******** Href *****/
+a{
+	color:black;
+	text-decoration: none;
+}
+
+a:hover{
+	color:gray;
+}
+ a img{
+	vertical-align: bottom;
+ }
+
+/************** Header ********************/
+#h-top{
+	border-bottom:solid black 3px;
+	padding:0 0 10px 0;
+	text-align:center;
+}
+
+#logo{
+	float:left;
+}
+
+nav ul{
+	margin: 0;
+	list-style: none;
+	padding-top:2.7em;
+	font-size: 2em;
+}
+
+nav li{
+	display:inline;
+	padding:0 20px;
+}
+
+#h-bottom{
+	background:url('img/banniere.png');
+	background-repeat: no-repeat;
+	background-size:cover;
+	width:100%;
+	height:250px;
+	padding-top:206px;
+	margin-top:10px;
+}
+
+#layer {
+	background-color: rgba(248, 247, 216, 0.4);
+	padding:0.5em 0.5em;
+}
+
+
+#button-article{
+	float:right;
+	/*** gradient ******/
+	background: #cedbe9; /* Old browsers */
+	background: -moz-linear-gradient(top, #cedbe9 0%, #aac5de 17%, #4bb8f0 28%, #4bb8f0 28%, #4bb8f0 29%, #6199c7 50%, #419ad6 59%, #3a84c3 71%, #3a84c3 71%, #3a8bc2 84%, #26558b 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #cedbe9 0%,#aac5de 17%,#4bb8f0 28%,#4bb8f0 28%,#4bb8f0 29%,#6199c7 50%,#419ad6 59%,#3a84c3 71%,#3a84c3 71%,#3a8bc2 84%,#26558b 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #cedbe9 0%,#aac5de 17%,#4bb8f0 28%,#4bb8f0 28%,#4bb8f0 29%,#6199c7 50%,#419ad6 59%,#3a84c3 71%,#3a84c3 71%,#3a8bc2 84%,#26558b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedbe9', endColorstr='#26558b',GradientType=0 ); /* IE6-9 *//******************/
+	/********************/
+	border-radius: 5px;
+	padding:3px;
+	transform:translateY(-3px);
+}
+
+/************** Aside ***********************/
+#propos{
+	float:right;
+	width:250px;
+	height:100%;
+	margin-top:20px;
+	background-color:black;
+	color:white;
+	margin-left:10px;
+}
+#fig1{
+	margin:0;
+	padding:0 10px ;
+}
+.align{
+	text-align:center;
+}
+figcaption{
+	text-align: justify;
+}
+
+/***************Article **************************/
+#info{
+	background:url('img/logopointinterrogreduit.jpg');
+	background-repeat: no-repeat;
+	padding-left:30px;
+}
+#article-text{
+	padding:0 10px;
+	text-align: justify;
+}
+/************Footer*******************************/
+ footer{
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: space-between;
+	background-color:white;
+	border-top:solid black 3px;
+	width:100%;
+	padding-bottom:20px;
+ }
+#news{
+
+	padding-left: 20px;
+}
+#input-box{
+	margin:0 0 10px 0;
+}
+.photos{
+
+	padding:0 15px 0 0;
+}
+
+#partenaires{
+
+	padding-right:20px;
+}
