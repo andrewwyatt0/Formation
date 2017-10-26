@@ -42,14 +42,21 @@ h2,h3{
 	color:#FF404C;
 }
 
-a:not(.animated){
-	color:black;
-	text-decoration: none;
+.buttonBorderLight{
+		border:1px dashed #DAEBF2;
+	padding:5px 10px;
 }
-a:hover:not(.animated){
-	text-shadow: 2px 2px 4px white;
+.buttonBorderLight:hover{
+	color:#FF404C;
 }
 
+.buttonBorderDark{
+	border:1px dashed white;
+}
+.buttonBorderDark:hover{
+	color:#FF404C;
+	border:1px dashed #FF404C;
+}
 
 .wrapper{
 	max-width: 1200px;
@@ -79,7 +86,11 @@ header{
 	margin:20px;
 }
 
-
+#logo:hover{
+	background:url('../img/logoWhite.png');
+	background-repeat: no-repeat;
+	background-size:cover;
+}
 
 #hamburger{
 	position:absolute;
@@ -113,19 +124,13 @@ header{
 	padding:0.8em 0 0 0;
 	font-size: 1em;
 }
-/*
-nav li{
-	display:inline;
-	padding:0 20px;
 
-}
-*/
 /**********************************/
 
 
 /*********Section 1 (read more)***************/
 #section1{
-	/* Stars needs background and overflow*/
+	/* Stars needs background and overflow hidden*/
     background: radial-gradient(ellipse at bottom, #012E42 0%, #090a0f 100%);
     overflow: hidden;
     /* Stars */
@@ -148,7 +153,6 @@ nav li{
 	color: #FFF;
   	font-family: "lato", sans-serif;
   	font-weight: 150px;
-
   	margin-top: 20px;
   	padding-left: 10px;
 
@@ -157,19 +161,14 @@ nav li{
   background: -webkit-linear-gradient(white, #38495a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
 }
-
 
 #readmore{
-	padding:5px 10px;
-	color: #DAEBF2;
 	font-weight: 100px;
 	font-size: 20px;
-	border:1px dashed #DAEBF2;
-
-
 }
+
+
 /***********************************/
 
 
