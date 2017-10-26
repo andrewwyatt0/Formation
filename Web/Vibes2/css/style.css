@@ -178,6 +178,7 @@ nav li{
 #sectionArguments{
 	width:100%;
 	background-color:#E3F8FF;
+	min-height: 370px;
 }
 #wrapperpro{
 	display: flex;
@@ -264,33 +265,37 @@ nav li{
 }
 #sectionPhotos table{
 	width:100%;
-	border-spacing:0;
+
 	table-layout: fixed;
+	border-spacing: 0;
 }
 #sectionPhotos td{
 	width:25%;
 	overflow: hidden;
 	position: relative;
+	padding: 0;
+
 }
+
+
 
 td.imgvideo .filigrane{
 	background: transparent url('../img/iconPlay.png') top left no-repeat;
 	background-size: 100%;
 	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+	top: 20%;
+	left: 20%;
+	width: 60%;
+	height: 60%;
 	z-index: 3;
-
 }
 
 #sectionPhotos td img{
 	z-index: 2;
+	vertical-align: bottom;
 }
 
 #photoLoadMore{
-
 	padding:5px;
 	border:solid 1px black;
 }
