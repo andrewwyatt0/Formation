@@ -9,33 +9,29 @@
 				border: 1px solid #CCC;
 				margin: 0 auto;
 				background-color:#FFF;
+				display: flex;
 			}
 			#rouge, #vert, #bleu{
 				text-align:center;
 			}
 			#rouge{
-				position: absolute;
-				top: 200px;
-				left:200px;
+
+				margin: auto;
+				display: flex;
 
 				width:200px;
 				height:200px;
 				background-color:#F00;
 			}
 			#vert{
-				position: absolute;
-				top: 250px;
-				left:250px;
-
+				display: flex;
+			    margin: auto;
 				width:100px;
 				height:100px;
 				background-color:#0F0;
 			}
 			#bleu{
-				position: absolute;
-				top: 275px;
-				left:275px;
-
+				margin: auto;
 				width:50px;
 				height:50px;
 				background-color:#00F;
