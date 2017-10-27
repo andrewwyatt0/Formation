@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<style>
+
+			#container{
+				max-width: 1200px;
+				margin: 0 auto;
+				position: relative;
+			}
+			#mouchard{
+				width: 100px;
+				height: 30px;
+
+				position:absolute;
+				background-color: rgba(128,128,128,0.5);
+				display: none;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="mouchard"></div>
+			<img src="Europe_location.png" width="1200" height="800" usemap="#europemap">
+			<map id="europemap" name="europemap">
+				<area id="france" shape="rect" coords="350,497,507,663" href="sun.htm" alt="France">
+
+			</map>
+
+		</div>
+		<script src="jquery.min.js"></script>
+		<script>
+			$("#france").mouseover(function(event){
+				console.log(event);
+				$("#mouchard").text($(this).attr("alt"))
+							  .css({"top": event.pageY, "left": event.pageX})
+							  .show();
+			}).mouseout(function(){
+				$("#mouchard").hide();
+			});
+
+		</script>
+	</body>
+</html>

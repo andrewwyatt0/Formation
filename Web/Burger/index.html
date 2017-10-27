@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<style>
+			html body{
+				padding:0;
+				margin:0;
+				font-size: 14px;
+			}
+
+			#container{
+				max-width: 1200px;
+				margin: 0 auto;
+				position: relative;
+			}
+			#marker1{
+				width: 5px;
+				height: 5px;
+				position:absolute;
+				top:500px;
+				left:100px;
+				background-color: rgba(255,0,0,0.8);
+			}
+			#marker2{
+				width: 5px;
+				height: 5px;
+				position:absolute;
+				top:0;
+				left:0;
+				background-color: rgba(0,0,255,0.8);
+			}
+			#beefTooltip{
+				width: 150px;
+				height: 40px;
+				position:absolute;
+				display:none;
+			}
+				.toolLine{
+					width:2px;
+					height:40px;
+					background-color:transparent;
+					border-left:2px solid cadetblue;
+				}
+				.toolText{
+					text-align: center;
+					color:floralwhite;
+					background-color: cadetblue;
+					padding: 1em;
+				}
+				.toolInfo{
+					border: 2px dashed white;
+					border-radius: 10px;
+				}
+
+			#breadTooltip{
+				width: 150px;
+				height: 40px;
+				position:absolute;
+				display:none;
+			}
+
+			#breadInfo{
+				display: none;
+			}
+			#info{
+				text-align: center;
+			}
+
+		</style>
+	</head>
+	<body>
+
+		<div id="container">
+
+			<img src="burger.jpg" width="1200" height="800" usemap="#burgerMap">
+			<map id="burgerMap" name="burgerMap">
+				<area id="beef" shape="rect" coords="147,487,1070,637" href="sun.htm" alt="beef">
+				<area id="bread" shape="rect" coords="201,45,1033,289" href="sun.htm" alt="bread">
+			</map>
+
+
+			<div id="beefTooltip">
+				<div class="toolLine"></div>
+				<div id="beefText" class="toolText">% <b>PURE</b> Beef</div>
+			</div>
+
+			<div id="breadTooltip">
+				<div class="toolLine"></div>
+				<div id="breadText" class="toolText"><b>ORGANIC</b> Wholemeal Bread</div>
+			</div>
+		</div>
+
+		<div id="info">
+			<p  id="breadInfo" class="toolText toolInfo">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+
+		<script src="jquery.min.js"></script>
+		<script>
+
+			/**************** Functions ******************/
+
+			function tooltipShow(targetID,e){
+					console.log("e", e);
+					$(targetID+"Tooltip").text($(this).attr("alt"))
+								  .css({"top": event.pageY, "left": event.pageX})
+								  .slideDown(500 );
+				$(targetID+"Info").slideDown(500 );
+			};
+			function tooltipHide(targetID){
+				$(targetID+"Tooltip").slideUp(200);
+				$(targetID+"Info").slideUp(500 );
+			};
+
+			/************** Event methods *****************/
+
+			$("#beef").mouseenter(function(event){
+					tooltipShow("#beef",event);
+			});
+			$("#beef").mouseleave(function(event){
+					tooltipHide("#beef",event);
+			});
+
+
+			$("#bread").mouseenter(function(event){
+					tooltipShow("#bread",event);
+			});
+			$("#bread").mouseleave(function(event){
+					tooltipHide("#bread",event);
+			});
+
+		</script>
+	</body>
+</html>
