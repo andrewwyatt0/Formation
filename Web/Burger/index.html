@@ -9,7 +9,7 @@
 				font-size: 14px;
 			}
 
-			#container{
+			#container, #burgerMap{
 				max-width: 1200px;
 				margin: 0 auto;
 				position: relative;
@@ -22,85 +22,112 @@
 				left:100px;
 				background-color: rgba(255,0,0,0.8);
 			}
-			#marker2{
-				width: 5px;
-				height: 5px;
-				position:absolute;
-				top:0;
-				left:0;
-				background-color: rgba(0,0,255,0.8);
-			}
-			#beefTooltip{
-				width: 150px;
-				height: 40px;
-				position:absolute;
-				display:none;
-			}
-				.toolLine{
-					width:2px;
-					height:40px;
-					background-color:transparent;
-					border-left:2px solid rgba(95,158,160,0.7);
-				}
-				.toolText{
-					text-align: center;
-					/*color:black;*/
-                   /* background: rgba(255, 255, 255, 0.6) !important; */
-                    color:floralwhite;
-                    background-color: rgba(95,158,160,0.7);
-					/*background-color: cadetblue;*/
-					padding: 1em;
-				}
-				.toolInfo{
-					border: 2px dashed white;
-					border-radius: 10px;
-				}
 
-			#breadTooltip{
-				width: 150px;
-				height: 40px;
-				position:absolute;
-				display:none;
+
+			area{
+				/* to stop slidedown bouncing (map area has higher z-index than tooltip)*/
+				/*position: relative;*/
+				z-index: 100;
 			}
 
-			#breadInfo{
-				display: none;
-                min-height: 100px;
+			/* Tooltips */
+			.toolLine{
+				width:2px;
+				height:40px;
+				max-height:40px;
+				background-color:transparent;
+				border-left:2px solid rgba(95,158,160,0.7);
+				z-index: 1;
 			}
-            #breadImg{
-                float:left;
-                width:200px;
-            }
-			#info{
+			.toolText{
 				text-align: center;
+				/*color:black;*/
+			   /* background: rgba(255, 255, 255, 0.6) !important; */
+				color:floralwhite;
+				background-color: rgba(95,158,160,0.7);
+				/*background-color: cadetblue;*/
+				padding: 1em;
 			}
+			.toolInfo{
+				display: none;
+				max-width:850px;
+				margin:0 auto;
+				min-height: 115px;
+				border: 2px dashed white;
+				border-radius: 10px;
+			}
+			.toolInfo img{
+				float:left;
+                width:200px;
+			}
+
+			.toolTip{
+				width: 150px;
+				height: 40px;
+				max-height:40px;
+				position:absolute;
+				display:none;
+
+			}
+			.zindex{
+				z-index: 0;
+			}
+
+
+
+
+
 
 		</style>
 	</head>
 	<body>
 
 		<div id="container">
+			<div id="marker1"></div>
 
-			<img src="burger.jpg" width="1200" height="800" usemap="#burgerMap">
+
+			<img src="burger.jpg" id="burger" width="1200" height="800" usemap="#burgerMap" >
 			<map id="burgerMap" name="burgerMap">
-				<area id="beef" shape="rect" coords="147,487,1070,637" href="sun.htm" alt="beef">
-				<area id="bread" shape="rect" coords="201,45,1033,289" href="sun.htm" alt="bread">
+				<area id="beef" shape="rect" coords="147,487,1070,637" href="sun.htm" alt="beef" >
+				<area id="bread" shape="rect" coords="201,45,1033,289" href="sun.htm" alt="bread" >
+				<area id="tomato" shape="rect" coords="560,320,1005,375" href="sun.htm" alt="tomato" >
 			</map>
 
 
-			<div id="beefTooltip">
-				<div class="toolLine"></div>
-				<div id="beefText" class="toolText">% <b>PURE</b> Beef</div>
+			<div id="beefTooltip" class="toolTip allowRollOver">
+				<div class="toolLine allowRollOver"></div>
+				<div id="beefText" class="toolText allowRollOver">100% <b>PURE</b> Beef</div>
 			</div>
 
-			<div id="breadTooltip">
-				<div class="toolLine"></div>
-				<div id="breadText" class="toolText"><b>ORGANIC</b> Wholemeal Bread</div>
+			<div id="breadTooltip" class="toolTip allowRollOver">
+				<div class="toolLine allowRollOver"></div>
+				<div id="breadText" class="toolText allowRollOver"><b>ORGANIC</b> Wholemeal Bread</div>
 			</div>
+
+			<div id="tomatoTooltip" class="toolTip">
+				<div class="toolLine"></div>
+				<div id="tomatoText" class="toolText"><b>JUICY</b> tomatoes</div>
+			</div>
+
+		</div>
+
+
+		<div id="beefInfo"  class="toolText toolInfo" >
+            <img src="Bilder_HP1_1600x900.jpg" >
+			<p >
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
 		</div>
 
 		<div id="breadInfo"  class="toolText toolInfo" >
-            <img src="ble_1.png" id="breadImg">
+            <img src="ble_1.png" >
+			<p >
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+
+		<div id="tomatoInfo"  class="toolText toolInfo" >
+            <img src="tomatoes.png" >
 			<p >
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</p>
@@ -109,36 +136,80 @@
 		<script src="jquery.min.js"></script>
 		<script>
 
-			/**************** Functions ******************/
+			/**************** User Functions ******************/
 
-			function tooltipShow(targetID,e){
-					console.log("e", e);
-					$(targetID+"Tooltip").text($(this).attr("alt"))
-								  .css({"top": event.pageY, "left": event.pageX})
-								  .slideDown(500 );
-				$(targetID+"Info").slideDown(500 );
+			function modWidth(mappedImg, e){
+			// Calculate decalage due to window resize
+				var modValue=0;
+				var winWidth = $(window).width(); //HTML document(document) of browser viewport (window)
+				var imgWidth = $(mappedImg).width();
+
+				if (winWidth >= imgWidth)
+				{
+					modValue = (winWidth - imgWidth)/2 ;
+				}
+
+				return modValue;
 			};
-			function tooltipHide(targetID){
-				$(targetID+"Tooltip").slideUp(200);
-				$(targetID+"Info").slideUp(500 );
+
+
+			function tooltipShow(mappedImg,targetID,e){
+
+
+					$(targetID+"Tooltip").text($(this).attr("alt"))
+										  	.css({"top": event.pageY, "left": event.pageX - modWidth(mappedImg,e) })
+										  	.slideDown(300 );
+					$(targetID+"Info").slideDown(300 );
+
+			};
+
+			function tooltipHide(targetID,e){
+
+					$(targetID+"Tooltip").slideUp(100);
+					$(targetID+"Info").slideUp(100 );
+
+			};
+
+			function tooltipMove(mappedImg,targetID,e){
+				$(targetID+"Tooltip").css({
+				   left:  e.pageX  - modWidth(mappedImg,e) ,
+				   top:   e.pageY
+				});
+
+			};
+
+			function showHide(mappedImg,targetID){
+
+				$(targetID).mouseenter(function(event){
+					tooltipShow(mappedImg,targetID,event);
+				});
+
+				/*
+				$(burgerMap).mouseenter(function(event){
+					tooltipShow(mappedImg,targetID,event);
+				});
+				*/
+
+				$(targetID).mouseleave(function(event){
+
+					tooltipHide(targetID);
+
+				});
+
+
+				/*
+				$(targetID).on('mousemove', function(event){
+					tooltipMove(mappedImg,targetID,event);
+				});
+			*/
 			};
 
 			/************** Event methods *****************/
 
-			$("#beef").mouseenter(function(event){
-					tooltipShow("#beef",event);
-			});
-			$("#beef").mouseleave(function(event){
-					tooltipHide("#beef",event);
-			});
+			showHide("#burger","#beef");
+			showHide("#burger","#bread");
+			showHide("#burger","#tomato");
 
-
-			$("#bread").mouseenter(function(event){
-					tooltipShow("#bread",event);
-			});
-			$("#bread").mouseleave(function(event){
-					tooltipHide("#bread",event);
-			});
 
 		</script>
 	</body>
