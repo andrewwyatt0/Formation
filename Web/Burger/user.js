@@ -19,8 +19,8 @@
 
 					$(targetID+"Tooltip").text($(this).attr("alt"))
 										  	.css({"top": event.pageY, "left": event.pageX - modWidth(mappedImg,e) })
-										  	.slideDown(300);
-					$(targetID+"Info").slideDown(300);
+										  	.slideDown(200);
+					$(targetID+"Info").slideDown(200);
 
 			};
 
@@ -45,12 +45,17 @@
 					tooltipShow(mappedImg,targetID,event);
 				});
 
-				$(targetID).mouseleave(function(event){
+				$(targetID).mouseleave(function(){
 
 					tooltipHide(targetID);
 
 				});
 
+
+				$(document).on('mousemove', function(event){
+					tooltipMove(mappedImg,targetID,event);
+
+				});
 
 			};
 
