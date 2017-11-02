@@ -62,6 +62,7 @@ html body{
 				max-height:40px;
 				position:absolute;
 				display:none;
+				pointer-events:none;
 
 			}
 			.zindex{
